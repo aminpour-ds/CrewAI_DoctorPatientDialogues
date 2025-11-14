@@ -1,0 +1,24 @@
+[project]
+name = "doctor_patient_dialogues"
+version = "0.1.0"
+description = "Doctor_Patient_Dialogues using crewAI"
+authors = [{ name = "Your Name", email = "you@example.com" }]
+requires-python = ">=3.10,<3.14"
+dependencies = [
+    "crewai[tools]==1.2.0"
+]
+
+[project.scripts]
+doctor_patient_dialogues = "doctor_patient_dialogues.main:run"
+run_crew = "doctor_patient_dialogues.main:run"
+train = "doctor_patient_dialogues.main:train"
+replay = "doctor_patient_dialogues.main:replay"
+test = "doctor_patient_dialogues.main:test"
+run_with_trigger = "doctor_patient_dialogues.main:run_with_trigger"
+
+[build-system]
+requires = ["hatchling"]
+build-backend = "hatchling.build"
+
+[tool.crewai]
+type = "crew"
